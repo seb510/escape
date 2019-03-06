@@ -1,0 +1,445 @@
+@font-face {font-family: "BrandonGrotesque-Regular";
+    src: url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.eot"); /* IE9*/
+    src: url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.woff2") format("woff2"), /* chrome、firefox */
+    url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.woff") format("woff"), /* chrome、firefox */
+    url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("fonts/BrandonGrotesque-Regular/BrandonGrotesque-Regular.svg#BrandonGrotesque-Regular") format("svg"); /* iOS 4.1- */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "BrandonGrotesque-Regular";
+    /*font-family: brandon-grotesque, sans-serif;*/
+    /*font-style: normal;*/
+    /*font-weight: 700;*/
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.universal{
+    padding: 70px 0 70px;
+}
+
+        /*Первая секция Header*/
+
+.back1{
+    background: url("../img/Tint.jpg") no-repeat center top;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+
+}
+.menu__item{
+    margin-right: 40px;
+}
+
+.menu__item:last-child{
+    margin-right: 0;
+}
+
+.menu__item a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: white;
+    transition: 0.2s ease-out;
+}
+
+.menu__item a:hover{
+    color: black;
+}
+.text{
+    padding-top: 160px;
+    text-align: center;
+    color: white;
+}
+
+.text__quest{
+    font-size: 35px;
+    margin: 0;
+}
+
+.text__big{
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 65px;
+}
+
+.button{
+    margin:85px 0 110px 335px;
+    width: 235px;
+    padding: 10px 10px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    border: solid 2px white;
+    transition: 0.2s ease-out;
+}
+
+.button:focus {
+    border: none;
+}
+
+.button:hover{
+    background: white;
+    color: black;
+}
+
+    /*Вторая секция Develop*/
+
+.develop{
+    display: flex;
+    justify-content: center;
+}
+
+.develop__text{
+    width: 540px;
+    margin-right: 100px;
+}
+
+.develop__main{
+    margin: 0;
+    font-size: 45px;
+    color: black;
+    text-transform: capitalize;
+    font-weight:lighter;
+}
+.develop__main span{
+    font-weight:bold;
+    font-size: 50px;
+}
+
+.develop__info{
+    color: #777777;
+    font-size: 15px;
+}
+
+.develop__img{
+    width: 200px;
+    height: 200px;
+    padding-top: 20px;
+}
+
+    /*Третья секция Ident*/
+
+.back2{
+    background-color: #fafafa;
+}
+
+.develop__text.sec{
+    margin-right: 0;
+}
+
+.develop__img.sec{
+    margin-right: 100px;
+    width: 235px;
+    height: 180px;
+}
+
+    /*Четвертая секция Apply*/
+
+.apply__full{
+    display: flex;
+    justify-content: center;
+}
+.apply__oll{
+    margin: 30px 30px;
+}
+
+.oll__brand{
+    display: flex;
+    text-align: center;
+    width: 380px;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.brand__img{
+    text-align: center;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 15px;
+    display:flex;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+}
+.brand__text{
+    width: 280px;
+    text-align: left;
+}
+
+.brand__main{
+    font-size: 25px;
+    color: black;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+}
+
+.brand__info{
+    margin: 5px;
+    font-size: 15px;
+    color: #777777;
+}
+
+    /*Пьятая секция Client*/
+
+.client__inform{
+    text-align: center;
+}
+
+.client__text{
+    margin: -5px;
+    color: #777777;
+    font-size: 18px;
+
+}
+
+.client__user{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 40px 0;
+    align-items:flex-start;
+}
+
+.user__img{
+    width: 200px;
+    height: 165px;
+    border-radius: 50%;
+    background: url("../img/images3.png") no-repeat center top;
+}
+
+.user__img.cat{
+    background: url("../img/image4s.png") no-repeat center top;
+}
+.user__answer{
+    background-color: white;
+    margin-left: 50px;
+    font-size: 20px;
+    padding: 20px;
+    border: solid 1px #ededed;
+    /*border:solid 10px transparent;*/
+    /*border-right-color:#fff;*/
+    /*position:absolute;*/
+    /*margin:-85px 0 0 -20px;*/
+}
+
+.answer__info{
+    color: #777777;
+}
+
+.answer__name{
+    color: #91a6d1;
+}
+
+.user__img.cat{
+    margin-left: 50px;
+}
+
+    /*Шестая  секция Logo*/
+
+.logotype{
+    display: flex;
+    justify-content: center;
+}
+
+.logotype__img{
+    display: block;
+    padding: 50px 25px 50px 0;
+}
+
+   /*Седьмая  секция Team*/
+
+.back3{
+    background-color: black;
+}
+
+.develop__main.team {
+    color: white;
+}
+
+.mans{
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 80px;
+}
+
+.team__mans{
+    width: 240px;
+}
+
+.mans__title{
+    text-align: center;
+}
+
+.mans__img{
+    margin: 10px auto;
+    width: 200px;
+    border-radius: 50%;
+    padding: 85px 0 85px;
+    border: solid 2px white;
+    background: url("../img/images5.png") no-repeat center top;
+}
+.mans__img.second{
+    background: url("../img/images.png") no-repeat center top;
+}
+
+.mans__img.last{
+    background: url("../img/images2.png") no-repeat center top;
+}
+.mans__info{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.mans__main{
+    margin: 5px;
+    font-size: 20px;
+    color: white;
+}
+.mans__name{
+    font-size: 15px;
+    color: #b1b1b1;
+    margin: 5px;
+}
+
+.mans__social{
+    display:flex;
+    justify-content: center; /*центрируем элемент по горизонтали */
+    align-items: center; /* и вертикали */
+}
+
+.social{
+    text-align: center;
+    border-radius: 50%;
+    border: solid 2px white;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.social img{
+    margin: 6px auto;
+}
+
+.information{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.information__full{
+    color: #b1b1b1;
+    font-size: 20px;
+}
+
+        /*Восьмая секция Footer*/
+
+.back4{
+    background-color: #7690c5;
+    padding-bottom: 20px;
+}
+
+.say{
+    display: flex;
+    justify-content: space-between;
+}
+.hello{
+    color: white;
+}
+
+.connect{
+    display: flex;
+    justify-content: space-between;
+}
+
+.connect__with{
+    text-align: center;
+}
+
+.with__phone{
+    align-items:flex-start;
+    display: flex;
+    padding: 20px 1px 5px;
+}
+
+.with__phone img{
+    padding-right: 10px;
+}
+
+.infa{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+input, textarea::-webkit-input-placeholder {
+    color: #bbbbbb;
+    text-transform: capitalize;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.name{
+    border-radius: 3px;
+    width: 400px;
+    padding: 15px 15px;
+    background: #fff;
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+    margin-right: 18px;
+    border: 0;
+    outline: none;
+}
+
+.massage{
+    border-radius: 3px;
+    background: #fff;
+    font-size: 10px;
+    width: 420px;
+    height: 200px;
+    border: 0;
+    outline: 0;
+    padding: 15px 0 0 15px;
+    margin-top: 10px;
+}
+
+.line{
+    border-top: solid  #87a0d2;
+}
+
+.end__yar{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    padding: 20px 0 0;
+}
