@@ -11,10 +11,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: "BrandonGrotesque-Regular";
-    /*font-family: brandon-grotesque, sans-serif;*/
-    /*font-style: normal;*/
-    /*font-weight: 700;*/
-    /*font-family: 'Roboto', sans-serif;*/
 }
 
 ul, li {
@@ -29,9 +25,9 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .container{
-    max-width: 900px;
+    width: 930px;
     margin: 0 auto;
-
+    padding: 0;
 }
 
 .universal{
@@ -68,7 +64,7 @@ h1,h2,h3,h4,h5,h6{
     text-transform: capitalize;
     font-size: 16px;
     color: white;
-    transition: 0.2s ease-out;
+    transition: 0.4s ease-out;
 }
 
 .menu__item a:hover{
@@ -101,7 +97,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 25px;
     text-transform: capitalize;
     border: solid 2px white;
-    transition: 0.2s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .button:focus {
@@ -139,7 +135,7 @@ h1,h2,h3,h4,h5,h6{
 
 .develop__info{
     color: #777777;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .develop__img{
