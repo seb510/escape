@@ -62,13 +62,13 @@ h1,h2,h3,h4,h5,h6{
 .menu__item a{
     text-decoration: none;
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 17px;
     color: white;
     transition: 0.4s ease-out;
 }
 
 .menu__item a:hover{
-    color: black;
+    color: #87a0d2;
 }
 .text{
     padding-top: 160px;
