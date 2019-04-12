@@ -244,10 +244,35 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     padding: 20px;
     border: solid 1px #ededed;
-    /*border:solid 10px transparent;*/
-    /*border-right-color:#fff;*/
-    /*position:absolute;*/
-    /*margin:-85px 0 0 -20px;*/
+    position: relative;
+}
+
+.user__answer:last-child:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: solid 1px #ededed;
+    border-right: 0;
+    border-top: 0;
+    left: -8px;
+    bottom: 71px;
+    transform: rotate(45deg);
+}
+
+.user__answer:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: solid 1px #ededed;
+    border-left: 0;
+    border-bottom: 0;
+    right: -8px;
+    bottom: 71px;
+    transform: rotate(45deg);
 }
 
 .answer__info{
@@ -345,7 +370,15 @@ h1,h2,h3,h4,h5,h6{
     padding: 7px 0;
     width: 32px;
     margin-left: 10px;
+    transition: 0.3s ease-out;
+}
 
+.social:hover{
+    background: white;
+}
+
+.fab:hover{
+    color: black;
 }
 
 .information{
@@ -388,17 +421,14 @@ h1,h2,h3,h4,h5,h6{
     padding: 20px 1px 5px;
 }
 
-.with__phone img{
-    padding-right: 10px;
-}
-
 .infa{
-    padding: 0;
+    padding-left: 10px;
     margin: 0;
     text-align: center;
 }
 
-input, textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
     color: #bbbbbb;
     text-transform: capitalize;
     font-size: 10px;
