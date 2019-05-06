@@ -239,6 +239,7 @@ h1,h2,h3,h4,h5,h6{
 .user__img.cat{
     background: url("../img/image4s.png") no-repeat center top;
 }
+
 .user__answer{
     background-color: white;
     margin-left: 50px;
@@ -339,6 +340,7 @@ h1,h2,h3,h4,h5,h6{
 .mans__img.last{
     background: url("../img/images2.png") no-repeat center top;
 }
+
 .mans__info{
     text-align: center;
     text-transform: capitalize;
@@ -349,6 +351,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 20px;
     color: white;
 }
+
 .mans__name{
     font-size: 15px;
     color: #b1b1b1;
@@ -421,7 +424,10 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     padding: 20px 1px 5px;
 }
-
+.fa-envelope:hover,
+.fa-mobile-alt:hover{
+    color: black;
+}
 .infa{
     padding-left: 10px;
     margin: 0;
@@ -469,4 +475,47 @@ textarea::-webkit-input-placeholder{
     font-size: 18px;
     color: white;
     padding: 20px 0 0;
+}
+
+
+
+                    /*---- Adaptive_Media ----*/
+/*при максимальной ширини и мении будет работать запрос*/
+
+@media (max-width: 1160px) {
+
+    .container{     /*реaльная шырына ==with 100% + border=0 + padding 15+15*/
+
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 15%;
+        text-align: center;
+    }
+
+    .header{
+        padding: 0 15px;
+    }
+
+    .header__title{
+        font-size: 38px;
+        line-height: 48px;
+        margin-bottom: 75px;
+    }
+
+    .header__slogan{
+        font-size: 22px;
+        line-height: 38px;
+    }
+
+    .portfolio{
+        padding: 40px 50px;
+    }
+
+    .title{
+        font-size: 36px;
+    }
+
+    .end{
+        padding: 70px 60px;
+    }
 }
