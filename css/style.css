@@ -485,15 +485,20 @@ textarea::-webkit-input-placeholder{
 @media (max-width: 1160px) {
 
     .container{     /*реaльная шырына ==with 100% + border=0 + padding 15+15*/
-
         width: 100%;
         margin-bottom: 30px;
-        padding: 0 15%;
+        padding: 0 10%;
         text-align: center;
     }
 
     .header{
         padding: 0 15px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__title{
@@ -505,6 +510,16 @@ textarea::-webkit-input-placeholder{
     .header__slogan{
         font-size: 22px;
         line-height: 38px;
+    }
+
+    .mans {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .apply__full{
+        display: flex;
+        flex-direction: column;
     }
 
     .portfolio{
