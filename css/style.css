@@ -480,13 +480,13 @@ textarea::-webkit-input-placeholder{
 
 
                     /*---- Adaptive_Media ----*/
-/*при максимальной ширини и мении будет работать запрос*/
+       /*при максимальной ширини и мении будет работать запрос*/
 
 @media (max-width: 1160px) {
 
-    .container{     /*реaльная шырына ==with 100% + border=0 + padding 15+15*/
+    .container{     /*реальная шырына ==with 100% + border=0 + padding 15+15*/
         width: 95%;
-        padding: 0 10%;
+        padding: 0 10px;
         text-align: center;
     }
 
@@ -500,14 +500,12 @@ textarea::-webkit-input-placeholder{
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     .menu__item{
         padding: 0;
         margin: 0;
         font-size: 35px;
-
     }
 
     .text {
@@ -519,6 +517,52 @@ textarea::-webkit-input-placeholder{
 
     .text__big {
         font-size: 35px;
+    }
+
+    .button{
+        margin: 45px 0;
+        width: 135px;
+        padding: 10px 10px;
+        background-color: transparent;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        text-transform: capitalize;
+        border: solid 1px white;
+    }
+
+    .develop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .develop__main{
+        text-align: center;
+        font-size: 15px;
+        padding: 20px 0;
+    }
+
+    .develop__main span {
+        font-weight: bold;
+        font-size: 35px;
+    }
+
+    .develop__text{
+        text-align: center;
+        padding: 30px;
+        font-size: 12px;
+    }
+
+    .develop__info{
+        padding: 0;
+    }
+    .develop__img,
+    .develop__img.sec
+    {
+        width: 175px;
+        height: 130px;
+        margin: 0;
     }
 
     .header__title{
