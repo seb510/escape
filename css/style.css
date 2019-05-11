@@ -539,7 +539,7 @@ textarea::-webkit-input-placeholder{
 
     .develop__main{
         text-align: center;
-        font-size: 15px;
+        font-size: 25px;
         padding: 20px 0;
     }
 
@@ -552,35 +552,97 @@ textarea::-webkit-input-placeholder{
         text-align: center;
         padding: 30px;
         font-size: 12px;
+        margin: 10px 0;
+        width: 75%;
     }
 
     .develop__info{
-        padding: 0;
+        padding: 12px;
+        font-size: 16px;
         margin: 0;
     }
 
     .develop__img,
-    .develop__img.sec
-    {
-        width: 175px;
+    .develop__img.sec {
+        width: 165px;
         height: 130px;
         margin: 0;
     }
 
-    .header__title{
-        font-size: 38px;
-        line-height: 48px;
-        margin-bottom: 75px;
+    .client__user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 40px 0;
     }
 
-    .header__slogan{
-        font-size: 22px;
-        line-height: 38px;
+    .client__text {
+        margin: -5px;
+        color: #777777;
+        font-size: 18px;
+    }
+
+    .user__img {
+        width: 160px;
+        height: 157px;
+        margin: 20px;
+    }
+
+    .user__img.cat {
+        margin: 20px 0 0 0;
+    }
+
+    .user__answer {
+        background-color: white;
+        font-size: 20px;
+        padding: 20px;
+        border: solid 1px #ededed;
+        margin: 0;
+        position: relative;
+    }
+
+    .user__answer:last-child:before{
+        border-right: 0;
+        border-bottom: 0;
+        left: 116px;
+        bottom: 249px;
+    }
+
+    .user__answer:before{
+        border-top: 0;
+        border-left: 0;
+        right: 110px;
+        bottom: -7px;
+    }
+
+    .logotype {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logotype__img {
+        display: block;
+        padding: 10px 0;
+        width: 105px;
     }
 
     .mans {
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .name{
+        width: 230px;
+        margin: 0;
+    }
+
+    .massage{
+        width: 245px;
+        height: 160px;
+        margin: 0;
+
     }
 
     .apply__full{
@@ -593,11 +655,16 @@ textarea::-webkit-input-placeholder{
         padding: 40px 50px;
     }
 
-    .title{
-        font-size: 36px;
+    .say {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .end{
-        padding: 70px 60px;
+    .hello__text{
+        font-size: 16px;
+        text-align: center;
     }
+
+
 }
