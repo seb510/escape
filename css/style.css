@@ -627,6 +627,11 @@ textarea::-webkit-input-placeholder{
         width: 105px;
     }
 
+    .mans__title{
+        padding: 10px 0;
+    }
+
+
     .mans {
         display: flex;
         flex-direction: column;
@@ -634,12 +639,12 @@ textarea::-webkit-input-placeholder{
     }
 
     .name{
-        width: 230px;
+        width: 250px;
         margin: 0;
     }
 
     .massage{
-        width: 245px;
+        width: 265px;
         height: 160px;
         margin: 0;
     }
