@@ -604,14 +604,14 @@ textarea::-webkit-input-placeholder{
     .user__answer:last-child:before{
         border-right: 0;
         border-bottom: 0;
-        left: 116px;
-        bottom: 249px;
+        left: 140px;
+        bottom: 227px;
     }
 
     .user__answer:before{
         border-top: 0;
         border-left: 0;
-        right: 110px;
+        right: 135px;
         bottom: -7px;
     }
 
