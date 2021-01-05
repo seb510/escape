@@ -18,9 +18,9 @@
         <div class="back1">
             <div class="container">
                 <div class="main">
-                    <div class="logo animated fadeInLeft">
+                    <a href="#" class="logo animated fadeInLeft">
                         <img src="img/paper-plane.png" alt="logo">
-                    </div>
+                    </a>
                     <nav>
                         <ul class="menu animated fadeInRight" >
                             <li class="menu__item">
@@ -402,20 +402,24 @@
                         <div class="form">
                             <form action="/signup" method="POST">
                                 <p>
-                                    <input type="text" name="first_name"  class="name" placeholder="your name*">
+                                    <input type="text" name="first_name"  class="name" placeholder="your name*" required>
                                 </p>
                                 <p>
-                                    <input type="email" name="email" class="name" placeholder="your e-mail*">
+                                    <input type="email" name="email" class="name" placeholder="your e-mail*" required>
                                 </p>
                                 <p>
-                                    <textarea name="comment"  placeholder="write massage*" class="massage"></textarea>
+                                    <textarea name="comment"  placeholder="write massage*" class="massage" required></textarea>
+                                </p>
+                                <p>
+                                    <input type="submit" class="btn">
                                 </p>
                             </form>
                         </div>
                     </div>
                 </div>
                     <div class="line"></div>
-                    <p class="end__yar"> &#169 2019 Escape by FreebiesXpress Made In Toronto
+                    <p class="end__yar"> 
+                        &#169 2019 Escape by FreebiesXpress Made In Toronto
                     </p>
             </div>
         </div>

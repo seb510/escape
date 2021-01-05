@@ -13,8 +13,9 @@ body {
     font-family: "BrandonGrotesque-Regular";
 }
 
-ul, li {
-    display: block;
+ul, li, a {
+    display: inline-block;
+    text-decoration: none;
     margin: 0;
     padding: 0;
 }
@@ -25,9 +26,9 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .container{
-    width: 930px;
+    max-width: 1170px;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 20px;
 }
 
 .universal{
@@ -482,7 +483,7 @@ textarea::-webkit-input-placeholder{
                     /*---- Adaptive_Media ----*/
        /*при максимальной ширини и мении будет работать запрос*/
 
-@media (max-width: 1160px) {
+@media (max-width: 992px) {
 
     .container{     /*реальная шырына ==with 100% + border=0 + padding 15+15*/
         width: 95%;
