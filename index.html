@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="image/png" rel="icon" href="img/favicon.png">
     <title>Escape</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body class="body d-flex">
@@ -31,15 +33,15 @@
                                 <a href="#clients">Clients</a>
                             </li>
                             <li class="menu__list">
-                                <a href="#item">Team</a>
+                                <a href="#team">Team</a>
                             </li>
                             <li class="menu__list">
                                 <a href="#contacts">Contact</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="nav__btn">
-
+                    <div class="menu-burger__header">
+                        <span></span>
                     </div>
                 </div>
             </div>
@@ -57,14 +59,14 @@
         </div>
     </header>
     <main class="main">
-        <section class="web universal-section">
+        <section id="web" class="web universal-section">
             <div class="container">
                 <div class="web__block d-flex align-center universal-info">
                     <div class="web__info info__block">
                         <h3 class="web__info-title info-title">
                             Web <span>Development</span>
                         </h3>
-                        <p class="web__info-text info-text">
+                        <p class="web__info-text info-text m-b-40 ">
                             Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt.
                         </p>
                         <p class="web__info-text info-text">
@@ -87,7 +89,7 @@
                         <h3 class="branding__info-title info-title">
                             Identity <span>Branding</span>
                         </h3>
-                        <p class="branding__info-text info-text">
+                        <p class="branding__info-text info-text m-b-40 ">
                             Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit aenean rhoncus posuere odio in tincidunt. Proin iaculis purus consequat sem cure digni ssim. Donec porttitora entum suscipit.
                         </p>
                         <p class="branding__info-text info-text">
@@ -97,7 +99,7 @@
                 </div>
             </div>
         </section>
-        <section class="services universal-section">
+        <section id="services" class="services universal-section">
             <div class="container">
                 <div class="services__block d-flex align-center">
                     <div class="services__wrapper">
@@ -185,7 +187,7 @@
                 </div>
             </div>
         </section>
-        <section class="clients universal-section">
+        <section id="clients" class="clients universal-section">
             <div class="container">
                 <h2 class="clients__title info-title">
                     Awesome <span> Clients</span>
@@ -229,7 +231,7 @@
                 </div>
             </div>
         </section>
-        <section class="team universal-section">
+        <section id="team" class="team universal-section">
             <div class="container">
                 <h2 class="team__title info-title">
                     Amazing <span> Team</span>
@@ -247,14 +249,14 @@
                             Marketer
                         </p>
                         <div class="team__social d-flex align-center">
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="https://twitter.com/intent/tweet" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-twitter"></i>
                             </a>
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <a href="https://facebook.com/123" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://telegram.me/jack_malbon" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            <a href="https://telegram.me/jack_malbon" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-telegram-plane"></i>
                             </a>
                         </div>
                     </div>
@@ -267,14 +269,14 @@
                             Coder
                         </p>
                         <div class="team__social d-flex align-center">
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="https://twitter.com/intent/tweet" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-twitter"></i>
                             </a>
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <a href="https://facebook.com/123" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://telegram.me/jack_malbon" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            <a href="https://telegram.me/jack_malbon" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-telegram-plane"></i>
                             </a>
                         </div>
                     </div>
@@ -287,14 +289,14 @@
                             Graphic Designer
                         </p>
                         <div class="team__social d-flex align-center">
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="https://twitter.com/intent/tweet" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-twitter"></i>
                             </a>
-                            <a href="" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <a href="https://facebook.com/123" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-facebook-f"></i>
                             </a>
-                            <a href="https://telegram.me/jack_malbon" class="team__social-img d-flex align-center" target="_blank">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
+                            <a href="https://telegram.me/jack_malbon" class="team__social-link d-flex align-center" target="_blank">
+                                <i class="team__social-img fab fa-telegram-plane"></i>
                             </a>
                         </div>
                     </div>
@@ -304,9 +306,9 @@
                 </p>
             </div>
         </section>
-        <section class="contacts universal-section">
+        <section id="contacts" class="contacts universal-section">
             <div class="container">
-                <div class="contacts__block d-flex align-center">
+                <div class="contacts__block d-flex">
                     <div class="contact">
                         <h2 class="contact__title info-title">
                             Say <span> Hello</span>
@@ -315,14 +317,37 @@
                             Don’t be shy, drop us an email and say hello! We are a really nice bunch of people :)
                         </p>
                         <div class="contact__wrapper">
-                            <a href="tel:416555000" class="contact__item">
-                                <img src="" alt="" class="contact__img">
+                            <a href="tel:416555000" class="contact__item d-flex align-center" target="_blank">
+                                <i class="fas fa-mobile-alt"></i>
                                 <span>(416) 555-0236</span>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet" class="contact__item d-flex align-center" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                                <span>@escape</span>
+                            </a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true" class="contact__item d-flex align-center" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>linkedin</span>
+                            </a>
+                            <a href="mailto:hello@escape.com" class="contact__item d-flex align-center" target="_blank">
+                                <i class="far fa-envelope"></i>
+                                <span>hello@escape.com</span>
+                            </a>
+                            <a href="https://facebook.com/123" class="contact__item d-flex align-center" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>facebook.com/escape</span>
+                            </a>
+                            <a href="http://pinterest.com/pin/create/link/?" class="contact__item d-flex align-center" target="_blank">
+                                <i class="fab fa-pinterest-p"></i>
+                                <span>pinterest.com/escape</span>
                             </a>
                         </div>
                     </div>
-                    <form action="" class="form">
-
+                    <form action="" class="form d-flex align-center">
+                        <input type="text" name="name" placeholder="Your Name*" required>
+                        <input type="email" name="email" placeholder="Your E-mail*" required>
+                        <textarea name="msg" id="" placeholder="Your Message*"></textarea>
+                        <button type="submit" class="form__btn">Send</button>
                     </form>
                 </div>
             </div>
@@ -335,6 +360,11 @@
             </p>
         </div>
     </footer>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/favicon.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 
 </html>

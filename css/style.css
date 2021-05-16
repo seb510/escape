@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'BrandonGrotesque-Bold';
+    src: url('fonts/BrandonGrotesque-Bold.eot');
+    src: local('Brandon Grotesque Bold'), local('fonts/BrandonGrotesque-Bold'), url('fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/BrandonGrotesque-Bold.woff') format('woff'), url('fonts/BrandonGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrandonGrotesque-Medium';
+    src: url('fonts/BrandonGrotesque-Medium.eot');
+    src: local('Brandon Grotesque Medium'), local('BrandonGrotesque-Medium'), url('fonts/BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'), url('fonts/BrandonGrotesque-Medium.woff') format('woff'), url('fonts/BrandonGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque-Regular';
+    src: url('fonts/BrandonGrotesque-Regular.eot');
+    src: local('Brandon Grotesque Regular'), local('BrandonGrotesque-Regular'), url('fonts/BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/BrandonGrotesque-Regular.woff') format('woff'), url('fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
 body {
     height: 100%;
 }
@@ -7,10 +31,12 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Brandon Grotesque-Regular';
     font-weight: 400;
     font-size: 18px;
     color: #777777;
+    position: relative;
+    overflow-x: hidden;
 }
 
 img {
@@ -39,6 +65,14 @@ h6,
 p {
     margin: 0;
     padding: 0;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    display: block;
+    border: none;
+    transition: all 0.5s;
 }
 
 .container {
@@ -80,11 +114,30 @@ p {
 }
 
 .info-title span {
-    font-weight: 700;
+    font-family: 'BrandonGrotesque-Bold';
 }
 
 .text-uppercase {
     text-transform: uppercase;
+}
+
+.m-b-40 {
+    margin-bottom: 40px;
+}
+
+.fixed-page {
+    overflow: hidden;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0 28px;
+    width: 100%;
+    z-index: 20;
+    background-color: #222;
 }
 
 .header {
@@ -94,6 +147,10 @@ p {
     background-size: cover;
     padding-top: 45px;
     color: #fff;
+}
+
+.header__nav {
+    transition: 0.4s ease;
 }
 
 .header__block {
@@ -107,10 +164,71 @@ p {
 
 .menu__list a {
     text-transform: capitalize;
+    padding: 5px 0;
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    transition: 0.4s ease;
 }
 
-.nav__btn {
+.menu__list a:hover {
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+
+/*** menu burger ***/
+
+.menu-burger__header {
+    position: relative;
+    width: 40px;
+    height: 35px;
     display: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.menu-burger__header span,
+.menu-burger__header:after,
+.menu-burger__header:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.menu-burger__header span {
+    top: 16px;
+}
+
+.menu-burger__header:after,
+.menu-burger__header:before {
+    content: '';
+}
+
+.menu-burger__header:after {
+    bottom: 5px;
+}
+
+.menu-burger__header:before {
+    top: 5px;
+}
+
+.menu-burger__header.open-menu span {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.menu-burger__header.open-menu:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: 0.4s;
+}
+
+.menu-burger__header.open-menu:after {
+    transform: rotate(-38deg);
+    bottom: 16px;
+    transition: 0.4s;
 }
 
 .offer {
@@ -124,7 +242,6 @@ p {
 .offer__text {
     margin-bottom: 40px;
     font-size: 32px;
-    font: 500px;
 }
 
 .offer__title {
@@ -182,7 +299,7 @@ p {
 .services__info-title {
     color: #222;
     font-size: 22px;
-    font-weight: 500;
+    font-family: 'BrandonGrotesque-Medium';
     margin-bottom: 20px;
 }
 
@@ -262,6 +379,7 @@ p {
 
 .brand {
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .brand__img:not(:last-child) {
@@ -307,7 +425,7 @@ p {
     justify-content: center;
 }
 
-.team__social-img {
+.team__social-link {
     border-radius: 50px;
     border: 2px solid #fff;
     justify-content: center;
@@ -317,17 +435,73 @@ p {
     transition: all 0.5s;
 }
 
-.team__social-img:hover {
+.team__social-img {
+    width: 20px;
+}
+
+.team__social-link:hover {
     background-color: #fff;
 }
 
-.team__social-img:not(:last-child) {
+.team__social-link:hover .team__social-img {
+    color: #000;
+}
+
+.team__social-link:not(:last-child) {
     margin-right: 10px;
+}
+
+.contacts__block {
+    justify-content: space-between;
 }
 
 .contacts,
 .contact__title {
     color: #fff;
+}
+
+.contact {
+    max-width: 425px;
+}
+
+.contact__item span {
+    margin-left: 12px;
+}
+
+.contact__text {
+    margin-bottom: 40px;
+}
+
+.contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.form {
+    flex-direction: column;
+    width: 450px;
+}
+
+.form input,
+.form textarea {
+    display: block;
+    width: 95%;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    resize: none;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #bbbbbb;
+}
+
+.form textarea {
+    height: 200px;
 }
 
 .footer,
@@ -344,4 +518,19 @@ p {
     padding: 26px 0;
     color: #fff;
     border-top: 1px solid #87a0d2;
+}
+
+.form__btn {
+    width: 250px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+
+.form__btn:hover {
+    background-color: #fff;
+    color: #7690c5;
 }
