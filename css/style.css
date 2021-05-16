@@ -137,6 +137,10 @@ button {
     padding: 20px 0 28px;
     width: 100%;
     z-index: 20;
+    transition: ease 0.3s;
+}
+
+.back-color {
     background-color: #222;
 }
 
@@ -150,7 +154,7 @@ button {
 }
 
 .header__nav {
-    transition: 0.4s ease;
+    transition: 0.2s ease;
 }
 
 .header__block {

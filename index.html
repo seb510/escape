@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
 
 <body class="body d-flex">
     <header class="header">
-        <div class="header__nav">
+        <div class="header__nav fixed">
             <div class="container">
                 <div class="header__block d-flex align-center">
                     <a href="#!" class="header__logo">
@@ -199,8 +200,8 @@
                     <img class="msg__img" src="img/user.jpg" alt="user">
                     <div class="msg__info msg__info-right d-flex">
                         <q class="msg__text">
-                                Proin iaculis purus consequat sem cure  digni ssim 
-                                donec porttitora entum suscipit aenean rhoncus.
+                            Proin iaculis purus consequat sem cure digni ssim
+                            donec porttitora entum suscipit aenean rhoncus.
                         </q>
                         <cite class="msg__author">
                             - Jamie Richardson, Founder of Cocoa Media
@@ -210,8 +211,8 @@
                 <div class="msg d-flex align-center">
                     <div class="msg__info msg__info-left d-flex">
                         <q class="msg__text">
-                                Proin iaculis purus consequat sem cure  digni ssim 
-                                donec porttitora entum suscipit aenean rhoncus.
+                            Proin iaculis purus consequat sem cure digni ssim
+                            donec porttitora entum suscipit aenean rhoncus.
                         </q>
                         <cite class="msg__author">
                             - Jamie Richardson, Founder of Cocoa Media
@@ -343,13 +344,14 @@
                             </a>
                         </div>
                     </div>
-                    <form action="" class="form d-flex align-center">
-                        <input type="text" name="name" placeholder="Your Name*" required>
-                        <input type="email" name="email" placeholder="Your E-mail*" required>
-                        <textarea name="msg" id="" placeholder="Your Message*"></textarea>
+                    <form id="form" action="" class="form d-flex align-center">
+                        <input type="text" class="form__input-name" name="name" placeholder="Your Name*" required>
+                        <input type="email" class="form__input-email" name="email" placeholder="Your E-mail*" required>
+                        <textarea name="msg" class="form__input-msg" id="" placeholder="Your Message*"></textarea>
                         <button type="submit" class="form__btn">Send</button>
                     </form>
                 </div>
+                <div id="message"></div>
             </div>
         </section>
     </main>
