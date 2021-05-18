@@ -34,6 +34,12 @@
         border-top: 1px solid #ededed;
         border-left: 1px solid #ededed;
     }
+    .team__btn-prev {
+        left: -16px;
+    }
+    .team__btn-next {
+        right: -16px;
+    }
     .contact,
     .form {
         margin: 0 auto;

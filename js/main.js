@@ -54,4 +54,33 @@ $(document).ready(function() {
             }
         })
     })
+
+    /*** Slick slider***/
+
+
+    $('.team__block').slick({
+        prevArrow: '<button type="button" class="team__btn team__btn-prev slick-prev"><i class="fas fa-arrow-left"></i></button>',
+        nextArrow: '<button type="button" class="team__btn team__btn-next slick-next"><i class="fas fa-arrow-right"></i></button>',
+        autoplay: true,
+        dots: true,
+        slidesToShow: 3,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
 });

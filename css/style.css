@@ -404,9 +404,69 @@ button {
 }
 
 .team__block {
-    justify-content: space-between;
     color: #fff;
     margin-bottom: 35px;
+}
+
+.team__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(50% - 70px);
+    color: #fafafa;
+    z-index: 25;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #87a0d2;
+    transition: ease 0.4s;
+}
+
+.team__btn:hover {
+    background-color: #fff;
+}
+
+.team__btn-prev:hover,
+.team__btn-next:hover {
+    color: #87a0d2;
+}
+
+.team__btn-prev {
+    left: 0;
+}
+
+.team__btn-next {
+    right: 0;
+}
+
+.team__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slick-dots {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active>button {
+    background-color: #87a0d2;
 }
 
 .team__item-img {
