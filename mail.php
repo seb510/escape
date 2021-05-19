@@ -1,21 +1,19 @@
 <?php
-if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['msg'])) {
-    die;
-} else {
-    $res = " ";
-    foreach ($_POST as $key => $value) {
-        if ($key === 'name') {
-            $first = "Имя: ";
-        }
-        if ($key === 'email') {
-            $first = "Email: ";
-        }
-        if ($key === 'msg') {
-            $first = "Сообщения: ";
-        }
-        $res .= "<tr><td>$first</td><td>$value</td></tr>";
-    }
+if (isset($_POST['name']) && $_POST['email'] && isset($_POST['msg'])) {
 
-    echo $res;
+    $result = array(
+        'name' => $_POST['name'],
+        'email' => $_POST['email'],
+        'msg' => $_POST['msg'],
+    );
+
+    ob_end_clean();
+
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit();
+} else {
+    $result = '0';
+    echo json_encode($result, JSON_UNESCAPED_UNICODE);
     die;
 }

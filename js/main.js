@@ -26,37 +26,14 @@ $(document).ready(function() {
 
     /*** Scroll to section***/
 
-    $(".menu__list a").click(function() {
+    $(".menu__list a, .offer__btn").click(function() {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top - 70;
         $('html, body').animate({ scrollTop: destination }, 600);
         return false;
     });
 
-
-    $('.form__btn').on('click', function(e) {
-        e.preventDefault();
-        let name = $('.form__input-name').val();
-        email = $('.form__input-email').val();
-        msg = $('.form__input-msg').val();
-        $.ajax({
-            url: '/mail.php',
-            method: 'post',
-            dataType: 'html',
-            data: {
-                name: name,
-                email: email,
-                msg: msg
-            },
-            success: function(responce) {
-                $('#message').html(responce);
-                console.log(responce);
-            }
-        })
-    })
-
     /*** Slick slider***/
-
 
     $('.team__block').slick({
         prevArrow: '<button type="button" class="team__btn team__btn-prev slick-prev"><i class="fas fa-arrow-left"></i></button>',
@@ -82,5 +59,64 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('.close').on('click', function() {
+            $("#bg_popup").fadeOut();
+        })
+        /*** Ajax request***/
+
+    $('.form__btn').on('click', function(e) {
+        e.preventDefault();
+        let name = $('.form__input-name').val();
+        email = $('.form__input-email').val();
+        msg = $('.form__input-msg').val();
+        $.ajax({
+            url: '/mail.php',
+            method: 'post',
+            dataType: 'json',
+            data: {
+                name: name,
+                email: email,
+                msg: msg
+            },
+            success: function(responce) {
+                let result = responce;
+
+                if (result == '0') {
+                    $('.form__input-name, .form__input-email, .form__input-msg').addClass('error');
+                } else {
+                    $('#message').html(result);
+                    console.log(typeof result);
+                    $('.form__input-name, .form__input-email, .form__input-msg').removeClass('error');
+                    $('.form__input-name, .form__input-email, .form__input-msg').val('');
+                    $('.popup__title span').html(result.name);
+                    $("#bg_popup").fadeIn();
+                    setTimeout(function() {
+                        $("#bg_popup").fadeOut();
+                    }, 4000)
+
+                }
+            },
+            error: function(jqXHR, exception) {
+                var msg = '';
+                if (jqXHR.status === 0) {
+                    msg = 'Not connect.\n Verify Network.';
+                } else if (jqXHR.status == 404) {
+                    msg = 'Requested page not found. [404]';
+                } else if (jqXHR.status == 500) {
+                    msg = 'Internal Server Error [500].';
+                } else if (exception === 'parsererror') {
+                    msg = 'Requested JSON parse failed.';
+                } else if (exception === 'timeout') {
+                    msg = 'Time out error.';
+                } else if (exception === 'abort') {
+                    msg = 'Ajax request aborted.';
+                } else {
+                    msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                }
+                console.log(msg);
+            },
+        });
+    })
 
 });
