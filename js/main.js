@@ -71,7 +71,7 @@ $(document).ready(function() {
         email = $('.form__input-email').val();
         msg = $('.form__input-msg').val();
         $.ajax({
-            url: '/mail.php',
+            url: 'mail.php',
             method: 'post',
             dataType: 'json',
             data: {
