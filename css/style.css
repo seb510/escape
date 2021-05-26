@@ -134,7 +134,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    padding: 20px 0 28px;
+    padding: 20px 0 15px;
     width: 100%;
     z-index: 20;
     transition: ease 0.3s;
@@ -559,11 +559,6 @@ button {
     resize: none;
 }
 
-.form input.error,
-.form textarea.error {
-    border: solid 1px red;
-}
-
 .form input::placeholder,
 .form textarea::placeholder {
     color: #bbbbbb;
@@ -653,4 +648,37 @@ button {
 .popup__title span {
     font-family: 'BrandonGrotesque-Bold';
     color: #87a0d2;
+}
+
+.form input.error-input,
+.form textarea.error-input {
+    border: solid 1px red;
+}
+
+.error {
+    color: red;
+    margin-left: 5px;
+}
+
+#btn-up {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 85px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid transparent;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    transition: .3s;
+    z-index: 10;
+}
+
+#btn-up:hover {
+    cursor: pointer;
+    border: 1px solid #222;
+    background-color: #87a0d2;
+    transition: .3s;
 }

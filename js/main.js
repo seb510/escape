@@ -60,16 +60,60 @@ $(document).ready(function() {
         ]
     });
 
+    /** Button up**/
+    let btnUp = $('#btn-up');
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            btnUp.fadeIn();
+        } else {
+            btnUp.fadeOut();
+        }
+    });
+
+    btnUp.on('click', function() {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+
+
+    //Close popup
     $('.close').on('click', function() {
-            $("#bg_popup").fadeOut();
-        })
-        /*** Ajax request***/
+        $("#bg_popup").fadeOut();
+    })
+
+    /*** Ajax request***/
 
     $('.form__btn').on('click', function(e) {
         e.preventDefault();
         let name = $('.form__input-name').val();
         email = $('.form__input-email').val();
         msg = $('.form__input-msg').val();
+
+        /*$(".error").remove();
+
+        if (name.length < 3) {
+            $('.form__input-name').after('<span class="error">This field is required</span>');
+            $('.form__input-name').addClass('error-input');
+        }
+        if (email.length < 3) {
+            $('.form__input-email').after('<span class="error">This field is required</span>');
+            $('.form__input-email').addClass('error-input');
+        } else {
+            let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
+            let validEmail = regEx.test(email);
+            if (!validEmail) {
+                $('.form__input-email').after('<span class="error">Enter a valid email</span>');
+                $('.form__input-email').addClass('error-input');
+            }
+        }
+        if (msg.length < 8) {
+            $('.form__input-msg').after('<span class="error">text must be atleast 8 characterslong</span>');
+            $('.form__input-msg').addClass('error-input');
+        }*/
+
         $.ajax({
             url: 'mail.php',
             method: 'post',
@@ -83,11 +127,14 @@ $(document).ready(function() {
                 let result = responce;
 
                 if (result == '0') {
-                    $('.form__input-name, .form__input-email, .form__input-msg').addClass('error');
+                    $('.form__input-name').addClass('error-input');
+                    $('.form__input-email').addClass('error-input');
+                    $('.form__input-msg').addClass('error-input');
+
                 } else {
                     $('#message').html(result);
-                    console.log(typeof result);
-                    $('.form__input-name, .form__input-email, .form__input-msg').removeClass('error');
+                    $(".error").remove();
+                    $('.form__input-name, .form__input-email, .form__input-msg').removeClass('error-input');
                     $('.form__input-name, .form__input-email, .form__input-msg').val('');
                     $('.popup__title span').html(result.name);
                     $("#bg_popup").fadeIn();
@@ -117,6 +164,7 @@ $(document).ready(function() {
                 console.log(msg);
             },
         });
+
     })
 
 });
