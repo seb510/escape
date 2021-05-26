@@ -179,6 +179,12 @@ button {
     border-top: 1px solid #fff;
 }
 
+.menu__list a.active {
+    color: #b8b7ee;
+    border-bottom: 1px solid #87a0d2;
+    border-top: 1px solid #87a0d2;
+}
+
 
 /*** menu burger ***/
 
@@ -233,6 +239,16 @@ button {
     transform: rotate(-38deg);
     bottom: 16px;
     transition: 0.4s;
+}
+
+.progress-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 4px;
+    width: 0%;
+    background-color: #7690c5;
+    z-index: 20;
 }
 
 .offer {

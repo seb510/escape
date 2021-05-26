@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     $(".menu__list a, .offer__btn").click(function() {
         var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top - 70;
+        var destination = $(elementClick).offset().top - 60;
         $('html, body').animate({ scrollTop: destination }, 600);
         return false;
     });
@@ -77,12 +77,30 @@ $(document).ready(function() {
         return false;
     });
 
+    //active link 
+    let menuLI = $(document).find('.menu__list a');
 
+    menuLI.on('click', function() {
+        menuLI.removeClass('active');
+        $(this).addClass('active');
+    });
+
+
+    //Progress bar
+
+    function progressBar() {
+        let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = scroll / height * 100;
+
+        document.getElementById('progressBar').style.width = scrolled + '%';
+    }
+    window.onscroll = function() { progressBar() };
 
     //Close popup
     $('.close').on('click', function() {
         $("#bg_popup").fadeOut();
-    })
+    });
 
     /*** Ajax request***/
 
