@@ -16,19 +16,29 @@ $(document).ready(function() {
         }
     })
 
+    //active link 
+    const addRemoveActiveLink = () => {
+        $(document).on('click', '.menu__list a', function() {
+            $('.menu__list a').removeClass('active');
+            $(this).addClass('active');
+        });
+
+    }
+
     /*** Header fixed top***/
 
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 1) {
-            $('.header__nav').addClass("back-color");
+    const addRemoveBackColor = () => {
+        const headerNav = $('.header__nav');
+        if ($(window).scrollTop() > 1) {
+            headerNav.addClass("back-color");
         } else {
-            $('.header__nav').removeClass("back-color");
+            headerNav.removeClass("back-color");
         }
-    });
+    }
 
     /*** Scroll to section***/
 
-    $(".menu__list a, .offer__btn").click(function() {
+    $(document).on('click', '.menu__list a, .offer__btn', function() {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top - 60;
         $('html, body').animate({ scrollTop: destination }, 600);
@@ -37,56 +47,54 @@ $(document).ready(function() {
 
     /*** Slick slider***/
 
-    $('.team__block').slick({
-        prevArrow: '<button type="button" class="team__btn team__btn-prev slick-prev"><i class="fas fa-arrow-left"></i></button>',
-        nextArrow: '<button type="button" class="team__btn team__btn-next slick-next"><i class="fas fa-arrow-right"></i></button>',
-        autoplay: true,
-        dots: true,
-        slidesToShow: 3,
-        responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
+    const initSlider = () => {
+        const teamBlock = $('.team__block');
+        if (teamBlock) {
 
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
+            teamBlock.slick({
+                prevArrow: '<button type="button" class="team__btn team__btn-prev slick-prev"><i class="fas fa-arrow-left"></i></button>',
+                nextArrow: '<button type="button" class="team__btn team__btn-next slick-next"><i class="fas fa-arrow-right"></i></button>',
+                autoplay: true,
+                dots: true,
+                slidesToShow: 3,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
 
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        }
+    }
 
     /** Button up**/
-    let btnUp = $('#btn-up');
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
+
+    const scrollToUp = () => {
+        const btnUp = $('#btn-up');
+        if ($(window).scrollTop() > 100) {
             btnUp.fadeIn();
         } else {
             btnUp.fadeOut();
         }
-    });
+    }
 
-    btnUp.on('click', function() {
+    $(document).on('click', '#btn-up', function() {
         $('body, html').animate({
             scrollTop: 0
         }, 800);
         return false;
     });
-
-    //active link 
-    let menuLI = $(document).find('.menu__list a');
-
-    menuLI.on('click', function() {
-        menuLI.removeClass('active');
-        $(this).addClass('active');
-    });
-
 
     //Progress bar
 
@@ -97,7 +105,7 @@ $(document).ready(function() {
 
         document.getElementById('progressBar').style.width = scrolled + '%';
     }
-    window.onscroll = function() { progressBar() };
+
 
     //Close popup
     $('.close').on('click', function() {
@@ -164,5 +172,17 @@ $(document).ready(function() {
         });
 
     })
+
+    initSlider();
+    scrollToUp();
+    addRemoveActiveLink();
+    addRemoveBackColor();
+    progressBar()
+
+    $(window).scroll(function() {
+        scrollToUp();
+        addRemoveBackColor();
+        progressBar()
+    });
 
 });
