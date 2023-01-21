@@ -5,14 +5,16 @@ $(document).ready(function() {
         $('.menu-burger__header').toggleClass('open-menu');
         $('.nav').toggleClass('open-menu');
         $('.body').toggleClass('fixed-page');
-        $('.menu__list a').click(function() {
-            if ($('.menu-burger__header').hasClass('menu-burger__header')) {
-                $('.menu-burger__header').removeClass('open-menu');
-                $('.nav').removeClass("open-menu");
-                $('.body').removeClass('fixed-page');
-            }
-        })
+
     });
+
+    $('.menu__list a').click(function() {
+        if ($('.menu-burger__header').hasClass('menu-burger__header')) {
+            $('.menu-burger__header').removeClass('open-menu');
+            $('.nav').removeClass("open-menu");
+            $('.body').removeClass('fixed-page');
+        }
+    })
 
     /*** Header fixed top***/
 
@@ -109,28 +111,6 @@ $(document).ready(function() {
         let name = $('.form__input-name').val();
         email = $('.form__input-email').val();
         msg = $('.form__input-msg').val();
-
-        /*$(".error").remove();
-
-        if (name.length < 3) {
-            $('.form__input-name').after('<span class="error">This field is required</span>');
-            $('.form__input-name').addClass('error-input');
-        }
-        if (email.length < 3) {
-            $('.form__input-email').after('<span class="error">This field is required</span>');
-            $('.form__input-email').addClass('error-input');
-        } else {
-            let regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}.){1,125}[A-Z]{2,63}$/;
-            let validEmail = regEx.test(email);
-            if (!validEmail) {
-                $('.form__input-email').after('<span class="error">Enter a valid email</span>');
-                $('.form__input-email').addClass('error-input');
-            }
-        }
-        if (msg.length < 8) {
-            $('.form__input-msg').after('<span class="error">text must be atleast 8 characterslong</span>');
-            $('.form__input-msg').addClass('error-input');
-        }*/
 
         $.ajax({
             url: 'mail.php',
